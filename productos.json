@@ -1,0 +1,24 @@
+[
+  {
+    "nombre": "Multímetro Digital Fluke 117",
+    "precio": 78990,
+    "tienda": "MercadoLibre",
+    "imagen": "https://via.placeholder.com/300x180.png?text=Multimetro",
+    "categoria": "Herramientas"
+  },
+  {
+    "nombre": "Router WiFi TP-Link Archer C6",
+    "precio": 45600,
+    "tienda": "Frávega",
+    "imagen": "https://via.placeholder.com/300x180.png?text=Router",
+    "categoria": "Redes"
+  },
+  {
+    "nombre": "Kit Soldador + Estación de Calor",
+    "precio": 61200,
+    "tienda": "Garbarino",
+    "imagen": "https://via.placeholder.com/300x180.png?text=Soldador",
+    "categoria": "Herramientas"
+  }
+  
+]

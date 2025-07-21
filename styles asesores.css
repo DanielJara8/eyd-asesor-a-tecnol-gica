@@ -1,107 +1,225 @@
-body{
-    background-color: gray;
+/* ===============================
+  🎨 VARIABLES Y ESTILOS GENERALES
+================================== */
+:root {
+  --color-primario: #1E3A8A;
+  --color-secundario: #555555;
+  --fondo-claro: #F9FAFB;
+  --texto: #333333;
 }
 
-.contenedor{
-    position:relative;
-    display:inline-block;
+html {
+  scroll-behavior: smooth;
 }
 
-.texto{
-    position:absolute;
-    top:20px;
-    left: 280px;
-    color:rgb(83, 158, 190);
-    font-size: 90px;
-    font-weight:bolder; 
-    font-family: monaco, Consolas, "Lucida Console", monospace;
-    font-style: normal;
-    font-variant: normal; 
-    text-shadow: 2px 0px 7px rgba(255, 0, 0, 0.945);
-
-    }
-
-
-h2{
-    
-    color: rgb(213, 213, 230);
-    justify-content: center;
-    font-size: 30px;
-    font-style: oblique;
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-primario);
+  color: var(--texto);
 }
 
-button{
-    
-   -webkit-box-align:center;
-    align-items: center;
-   
+/* ===============================
+  🧱 ESTRUCTURA PRINCIPAL
+================================== */
+header {
+  display: flex;
+  flex-wrap: wrap; 
+}
+section{
+  background-color:rgb(83, 158, 190);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  border-radius: 5px;
+}
+footer {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-a{
-    color: black;
-    text-decoration: underline;
-    
+/* ===============================
+  📦 CONTENEDORES Y TEXTO
+================================== */
+.contenedor {
+  position: relative;
+  display: inline-block;
 }
 
-#boton {
-    
-    color: #0D1AE9;
-    margin-left: 1130px;
-    padding-right: 70px;
-    border-radius: 2px;
-    border-bottom-style:solid;
-    
+.texto {
+  position: absolute;
+  top: 20px;
+  left: 280px;
+  color: rgb(83, 158, 190);
+  font-size: 90px;
+  font-weight: bolder;
+  font-family: 'Inter', sans-serif;
+  text-shadow: 2px 0px 7px rgba(255, 0, 0, 0.945);
 }
 
-fieldset{
-    
-    color:rgb(175, 22, 63);
-    font-weight: bold;
-    font-family: Tahoma;
-    padding:10px;
-    border-color: blueviolet;
-    text-decoration: brown;
-    
-    
-
+h2 {
+  color: rgb(213, 213, 230);
+  font-size: 30px;
+  font-style: oblique;
+  text-align: center;
 }
 
-#sf.apart{
-    color:blueviolet;
-    font-weight: lighter;
-    font-family: Arial, Helvetica, sans-serif;
-    border-color: chartreuse;
-    text-decoration: aqua;
+/* ===============================
+  🔘 BOTONES Y MENÚ
+================================== */
+nav {
+  background-color: rgb(177, 206, 219);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 20px;
 }
-
-li{
-    padding-right: 300px;
-}
-
-
 
 .menu {
-  display: flex;                /* Alinea los botones en fila */
-  flex-wrap: wrap;              /* Permite que salten de línea si no entran */
-  gap: 10px;                    /* Espacio entre botones */
-  justify-content: center;     /* Centra el contenido */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
   margin: 20px 0;
 }
 
 .boton-menu {
-  background-color: white;
-  border: 1px solid #888;
+  background-color: var(--color-primario);
+  color: white;
+  border: none;
   padding: 10px 20px;
-  border-radius: 6px;
-  font-weight: bold;
+  border-radius: 4px;
+  font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s;
 }
 
 .boton-menu:hover {
-  background-color: #565875;
-  color: white;
+  background-color: #162d6a; /* valor estático porque darken() no funciona en CSS puro */
 }
+
 .boton-menu:active {
   transform: scale(0.95);
+}
+
+button {
+  align-items: center;
+  /* Opción opcional para centrar texto dentro del botón */
+}
+
+/* ===============================
+  🔗 ENLACES
+================================== */
+a {
+  color: black;
+  text-decoration: underline;
+}
+
+/* ===============================
+  📄 FIELDSETS
+================================== */
+fieldset {
+  color: #F9FAFB;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+  padding: 5px;
+  border-color: blueviolet;
+  border-radius: 5px;
+  text-shadow: 3px 5px 3px rgba(0, 0, 0, 0.2);
+}
+
+
+#sf.apart {
+  color: var (--color-secundario);
+  font-weight: lighter;
+  font-family: 'Inter', sans-serif;
+  border-color: chartreuse;
+}
+
+/* ===============================
+  📋 LISTAS
+================================== */
+li {
+  padding-right: 300px;
+}
+
+/* ===============================
+  🧩 ELEMENTOS ESPECIALES
+================================== */
+#boton,
+#Buscar {
+  color: #0D1AE9;
+  margin-left: 1130px;
+  padding-right: 70px;
+  border-radius: 2px;
+  border-bottom-style: solid;
+}
+
+#lista-productos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 40px auto;
+  max-width: 1200px;
+}
+
+.tarjeta-producto {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 16px;
+  width: 280px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  text-align: center;
+}
+
+.tarjeta-producto:hover {
+  transform: scale(1.03);
+}
+
+.tarjeta-producto img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+/* ===============================
+  📱 ESTILOS PARA PANTALLAS CHICAS
+================================== */
+@media (max-width: 768px) {
+  .texto {
+    font-size: 40px;
+    left: 20px;
+    top: 10px;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .boton-menu {
+    width: 90%;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  li {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  #boton,
+  #Buscar {
+    margin-left: 0;
+    padding-right: 0;
+  }
 }
