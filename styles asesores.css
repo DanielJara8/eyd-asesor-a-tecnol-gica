@@ -47,6 +47,36 @@ footer {
   display: inline-block;
 }
 
+.contenedor-busqueda {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+#campo-busqueda {
+  padding: 10px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+#boton-buscar {
+  padding: 10px 20px;
+  background-color: var(--color-primario);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#boton-buscar:hover {
+  background-color: #0b2a6f;
+}
+
+
 .texto {
   position: absolute;
   top: 20px;

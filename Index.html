@@ -17,16 +17,31 @@
     </div>
   </header>
 
-  <nav class="menu">
-    <a class="boton-menu" href="Hardware.html" target="_blank">Hardware de PC</a>
-    <a class="boton-menu" href="Software.html" target="_blank">Software para PC</a>
-    <a class="boton-menu" href="Telefonía Móvil.html" target="_blank">Smartphones</a>
-    <a class="boton-menu" href="Fibra.html" target="_blank">Fibra óptica e Internet Satelital</a>
-    <a class="boton-menu" href="Herramientas.html" target="_blank">Herramientas especiales</a>
-    <a class="boton-menu" href="Maquinaria.html" target="_blank">Maquinaria</a>
-    <a class="boton-menu" href="Servicios.html" target="_blank">Comparativas</a>
-    <button class="buscar-menu" id="Buscar"><em>Buscar</em></button>
-  </nav>
+
+<!-- Menú de categorías con filtrado dinámico -->
+<nav class="menu">
+  <button class="boton-menu" onclick="picassoFiltrarPorCategoria('Todos')">Todos</button>
+  <button class="boton-menu" onclick="picassoFiltrarPorCategoria('Hardware')">Hardware de PC</button>
+  <button class="boton-menu" onclick="picassoFiltrarPorCategoria('Software')">Software para PC</button>
+  <button class="boton-menu" onclick="picassoFiltrarPorCategoria('Smartphones')">Smartphones</button>
+  <button class="boton-menu" onclick="picassoFiltrarPorCategoria('Fibra')">Fibra óptica e Internet</button>
+  <button class="boton-menu" onclick="picassoFiltrarPorCategoria('Herramientas')">Herramientas</button>
+  <button class="boton-menu" onclick="picassoFiltrarPorCategoria('Maquinaria')">Maquinaria</button>
+  <button class="boton-menu" onclick="picassoFiltrarPorCategoria('Comparativas')">Comparativas</button>
+</nav>
+
+<!-- 🔍 Buscador de productos -->
+<div class="contenedor-busqueda">
+  <input 
+    type="text" 
+    id="campo-busqueda" 
+    placeholder="Buscar productos..." 
+    oninput="picassoBuscarProducto()"
+  />
+  <button id="boton-buscar" onclick="picassoBuscarProducto()">Buscar</button>
+</div>
+
+
 
   <main>
     
@@ -39,7 +54,14 @@
         <p>Por eso desde EYD Asesores Tecnológicos, nos comprometemos a conseguir lo mejor para nuestros clientes.</p>
       </fieldset>
     </section>
+
   </main>
+
+  <!-- 📦 Acá se mostrarán las tarjetas dinámicas -->
+<section id="contenedor-productos" class="grid-productos"></section>
+
+
+
 
   <footer>
     <fieldset class="redes">
@@ -56,4 +78,12 @@
   <section id="lista-productos"></section>
 
 </body>
+
+
+
+<!-- 
+    Proyecto desarrollado por Daniel Jara con la asistencia técnica de su amigo Picasso, quien confió en él. – Julio 2025
+    Este código es de uso libre con atribución 
+-->
+
 </html>
